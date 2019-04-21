@@ -1,6 +1,7 @@
 const chart = document.getElementById('lineChart');
 const barChart = document.getElementById('barChart');
 const radarChart = document.getElementById('radarChart');
+const pieChart = document.getElementById('pieChart');
 let lineChart = new Chart(chart, {
   type: 'line',
   data: {
@@ -100,5 +101,22 @@ let radarGraph = new Chart(radarChart, {
               }
           }]
     }
+  }
+});
+
+let pieGraph = new Chart(pieChart, {
+  type: 'pie', 
+  data: {
+    labels: ['Cake', 'Ice Cream', 'Cookies', 'Pie'],
+    datasets: [{
+      label: '# of votes', 
+      data: [4, 10, 8, 12],
+      backgroundColor: [
+        '#E6E6FA',
+        '#87CEFA',
+        '#AFEEEE',
+        '#FF8C00'
+      ],
+    }]
   }
 });
